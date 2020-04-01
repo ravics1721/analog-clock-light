@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.root {
+    height: 66vh;
+    width: 25vw;
+    background-color: #fafafa;
+    margin: 15vh auto 15vh auto;
+}
+
+.text {
+    text-align: center;
+    margin-top: 30px;
+    color: #3E6FA2;
+    font: normal 50px/100% "Andale Mono", AndaleMono, monospace;
+}
+
+.clock {
+    height: 50vh;
+    width: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/clock.png");
+    background-size: cover;
+    border: 10px solid #fafafa;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+.clock .hour,
+.hr {
+    height: 170px;
+    width: 170px;
+}
+
+.clock .min,
+.mn {
+    height: 190px;
+    width: 190px;
+}
+
+.clock .sec,
+.sd {
+    height: 210px;
+    width: 210px;
+}
+
+.hr,
+.mn,
+.sd {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #fe346e;
+    z-index: 10;
+    border-radius: 5px 5px 0 0;
+}
+
+.mn::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 95px;
+    background: #3E6FA2;
+    z-index: 15;
+    border-radius: 5px 5px 0 0;
+}
+
+.sd::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 135px;
+    background: #8b2f97;
+    z-index: 12;
+    border-radius: 5px 5px 0 0;
+}
